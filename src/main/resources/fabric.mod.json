@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "stackitem64",
+	"version": "${version}",
+	"name": "Stackitem64",
+	"description": "Stackable item 1,16 to 64 (no tools) 아이템 최대 스택이 1,16인 아이템 스택을 64로 만듭니다(도구류 제외)",
+	"authors": [
+		"metao"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/stackitem64/sticon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.metao.stackitem.Stackitem64"
+		],
+		"fabric-datagen": [
+			"com.metao.stackitem.Stackitem64DataGenerator"
+		]
+	},
+	"mixins": [
+		"stackitem64.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
