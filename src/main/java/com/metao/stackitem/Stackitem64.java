@@ -5,8 +5,10 @@ import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static net.minecraft.item.Items.BUCKET;
-import static net.minecraft.item.Items.LAVA_BUCKET;
+
+import java.io.IOException;
+
+
 
 public class Stackitem64 implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
@@ -17,6 +19,12 @@ public class Stackitem64 implements ModInitializer {
 	@Override
 	public void onInitialize() {
 
+        try {
+            new StackItem64configfile().InitConfig();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
-	}
+
+    }
 }
