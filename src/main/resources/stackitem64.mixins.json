@@ -3,6 +3,10 @@
 	"package": "com.metao.stackitem.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
+		"AnvilScreenHandlerMixin",
+		"HorseScreenHandlerMixin",
+		"BucketItemMixin",
+		"BookItemMixin",
 		"ExampleMixin"
 	],
 	"injectors": {

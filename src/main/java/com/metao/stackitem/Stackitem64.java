@@ -2,6 +2,12 @@ package com.metao.stackitem;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.minecraft.block.ShulkerBoxBlock;
+import net.minecraft.block.entity.ShulkerBoxBlockEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.screen.ShulkerBoxScreenHandler;
+import net.minecraft.screen.slot.ShulkerBoxSlot;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,5 +32,11 @@ public class Stackitem64 implements ModInitializer {
         }
 
 
+
+    }
+    public static void insertNewItem(PlayerEntity player, ItemStack stack2) {
+        if (!player.getInventory().insertStack(stack2)) {
+            player.dropItem(stack2, false);
+        }
     }
 }
