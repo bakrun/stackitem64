@@ -16,7 +16,7 @@ public class BucketItemMixin {
 
     @Inject(method = "getEmptiedStack", at = @At(value = "HEAD"), cancellable = true)
     private static void stackableBucket(ItemStack stack, PlayerEntity player, CallbackInfoReturnable<ItemStack> cir){
-        if(!player.isCreative()) {
+        if(!player.isCreative() && stack.getItem() == Items.POWDER_SNOW_BUCKET) {
             if (stack.getCount() > 1) {
                 Stackitem64.insertNewItem(player, new ItemStack(Items.BUCKET));
                 cir.setReturnValue(stack);
